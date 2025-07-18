@@ -1,30 +1,25 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Header from '@/components/webapp/Header';
-import Hero from '@/components/webapp/Hero';
-import Portfolio from '@/components/webapp/Portfolio';
-import Contact from '@/components/webapp/Contact';
-import Footer from '@/components/webapp/Footer';
+import Clients from '@/components/landingpage/Clients';
+import { clientsData, portfolioData, servicesData } from '@/components/landingpage/types/data';
+import Footer from '@/components/landingpage/Footer';
+import Header from '@/components/landingpage/Header'
+import Hero from '@/components/landingpage/Hero'
+import Portfolio from '@/components/landingpage/Portfolio';
+import Services from '@/components/landingpage/Service';
+import React from 'react'
 
-const Home: NextPage = () => {
+const page = () => {
   return (
-    <div>
-      <Head>
-        <title>PixelPerfect | Web Design Portfolio</title>
-        <meta name="description" content="A professional web design portfolio created with Next.js, TypeScript, and Tailwind CSS." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <div className="bg-white font-sans text-gray-800">
       <Header />
       <main>
         <Hero />
-        <Portfolio />
-        {/* You can add an 'About' section component here */}
-        <Contact />
+        <Services services={servicesData} />
+        <Portfolio items={portfolioData} />
+        <Clients clients={clientsData} />
       </main>
       <Footer />
     </div>
   );
 }
 
-export default Home;
+export default page

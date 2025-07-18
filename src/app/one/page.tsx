@@ -2,7 +2,7 @@
 
 
 import React, { useState } from 'react';
-import { BarChart, Users, Settings, Shield, Zap, Menu, X, CheckCircle, ArrowRight, Star, Sparkles, LoaderCircle } from 'lucide-react';
+import { BarChart, Users,  Zap, Menu, X, CheckCircle, ArrowRight, Star, Sparkles, LoaderCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 

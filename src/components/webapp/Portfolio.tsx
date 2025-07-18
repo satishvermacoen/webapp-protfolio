@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectCard from '@/components/webapp/ProjectCard';
 
-// Define the type for a single project
 interface Project {
   title: string;
   description: string;
@@ -12,7 +11,7 @@ interface Project {
 
 const Portfolio: React.FC = () => {
   const projects: Project[] = [
-    {
+        {
       title: 'E-commerce Platform',
       description: 'A full-featured online store with a custom CMS and payment gateway integration.',
       imageUrl: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop',
@@ -43,14 +42,14 @@ const Portfolio: React.FC = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-[#1f1f1f]">
+    <section id="portfolio" className="py-20 bg-primary/50 text-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tighter">My Portfolio</h2>
+          <h2 className="text-4xl font-bold tracking-tighter text-secondary">My Portfolio</h2>
           <p className="text-lg text-secondary/70 mt-2">A selection of my best work.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
