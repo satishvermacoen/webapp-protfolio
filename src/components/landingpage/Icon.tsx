@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { IconProps, SectionTitleProps } from '@/components/landingpage/types/index';
+import { IconProps } from '@/components/landingpage/types/index';
 
 const Icon: React.FC<IconProps> = ({ name, ...props }) => {
   const icons: { [key: string]: JSX.Element } = {

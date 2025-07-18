@@ -49,7 +49,7 @@ const Portfolio: React.FC = () => {
           <p className="text-lg text-secondary/70 mt-2">A selection of my best work.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>

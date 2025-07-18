@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
         hostname: 'travelwebappp.blob.core.windows.net',
         pathname: '/brontofly-travelwebapp/**',
       },

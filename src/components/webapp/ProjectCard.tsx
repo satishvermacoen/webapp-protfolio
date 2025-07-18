@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   title: string;
@@ -25,9 +26,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl,
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="relative h-56">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
+          sizes='100vw'
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           onError={handleImageError}
         />

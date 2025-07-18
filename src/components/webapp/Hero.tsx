@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          I'm a passionate web designer specializing in creating beautiful, functional, and user-centered websites that drive results.
+          I&apos;m a passionate web designer specializing in creating beautiful, functional, and user-centered websites that drive results.
         </motion.p>
         <motion.div 
           className="flex justify-center items-center gap-4"

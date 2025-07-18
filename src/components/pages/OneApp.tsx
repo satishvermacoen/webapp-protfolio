@@ -19,8 +19,8 @@ const AnimatedSection = ({ children, delay = 0 }: { children: React.ReactNode; d
 );
 
 
-// Main App Component
-const App = () => {
+// Main OneApp Component
+const OneApp = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // State for AI Features
@@ -40,11 +40,11 @@ const App = () => {
     const [error, setError] = useState('');
 
     const navLinks = [
-        { href: '#features', label: 'Features' },
-        { href: '#ai-features', label: 'AI Tools' },
-        { href: '#how-it-works', label: 'How It Works' },
-        { href: '#pricing', label: 'Pricing' },
-        { href: '#testimonials', label: 'Testimonials' },
+        { href: '/', label: 'Features' },
+        { href: '/', label: 'AI Tools' },
+        { href: '/', label: 'How It Works' },
+        { href: '/', label: 'Pricing' },
+        { href: '/', label: 'Testimonials' },
     ];
 
     // Gemini API call for Class Description
@@ -64,7 +64,7 @@ const App = () => {
             
             const response = await fetch(apiUrl, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'Oneapplication/json' },
                 body: JSON.stringify(payload)
             });
 
@@ -103,7 +103,7 @@ const App = () => {
             const payload = { 
                 contents: chatHistory,
                 generationConfig: {
-                    responseMimeType: "application/json",
+                    responseMimeType: "Oneapplication/json",
                 }
             };
             const apiKey = ""; // Leave empty
@@ -111,7 +111,7 @@ const App = () => {
 
             const response = await fetch(apiUrl, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'Oneapplication/json' },
                 body: JSON.stringify(payload)
             });
 
@@ -215,7 +215,7 @@ const App = () => {
                         alt="Gym background"
                         width={1920}
                         height={1080} 
-                        className="absolute inset-0 w-full h-full object-cover" // eslint-disable-next-line @next/next/no-img-element
+                        className="absolute inset-0 w-full h-full object-cover"
                         onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => { (e.target as HTMLImageElement).src = 'https://placehold.co/1920x1080/000000/FFFFFF?text=Gym+Atmosphere'; }}
                     />
                     <div className="relative z-20 container mx-auto px-6 text-center">
@@ -225,7 +225,7 @@ const App = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            Unleash Your Gym's <br/> <span className="text-cyan-400">Full Potential</span>
+                            Unleash Your Gym&apos;s <br/> <span className="text-cyan-400">Full Potential</span>
                         </motion.h2>
                         <motion.p 
                             className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
@@ -257,14 +257,14 @@ const App = () => {
                         <AnimatedSection>
                             <div className="text-center mb-16">
                                 <h3 className="text-4xl md:text-5xl font-bold text-white">The Command Center for Your Gym</h3>
-                                <p className="mt-4 text-lg text-gray-400">From front desk to back office, we've got you covered.</p>
+                                <p className="mt-4 text-lg text-gray-400">From front desk to back office, we&apos;ve got you covered.</p>
                             </div>
                         </AnimatedSection>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { icon: Users, title: 'Member Management', description: 'A complete view of your members, from sign-up to success story.', image: 'https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=800&auto=format&fit=crop' },
                                 { icon: BarChart, title: 'Class Scheduling', description: 'Intuitive drag-and-drop scheduling for classes, trainers, and resources.', image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop' },
-                                { icon: Zap, title: 'Automated Billing', description: 'Set it and forget it. Secure, automated payments that just work.', image: 'https://images.unsplash.com/photo-1580221374589-2a969246aa6c?q=80&w=800&auto=format&fit=crop' }, // eslint-disable-next-line @next/next/no-img-element
+                                { icon: Zap, title: 'Automated Billing', description: 'Set it and forget it. Secure, automated payments that just work.', image: 'https://images.unsplash.com/photo-1580221374589-2a969246aa6c?q=80&w=800&auto=format&fit=crop' },
                             ].map((feature, index) => (
                                 <AnimatedSection key={index} delay={index * 0.1}>
                                     <div className="bg-gray-800 rounded-xl overflow-hidden group h-full flex flex-col">
@@ -307,7 +307,7 @@ const App = () => {
                                         <Sparkles className="w-8 h-8 text-cyan-400 mr-4" />
                                         <h4 className="text-2xl font-bold text-white">AI Class Description Writer</h4>
                                     </div>
-                                    <p className="text-gray-400 mb-6">Never write a class description again. Enter a class name and watch the magic happen.</p>
+                                    <p className="text-gray-400 mb-6">Never write a class description again. Enter a class name and watch the magic hOneappen.</p>
                                     <div className="space-y-4">
                                         <input 
                                             type="text"
@@ -417,13 +417,13 @@ const App = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             {[
                                 { name: 'Sarah L.', gym: 'FitZone Studio', quote: "GymFlow has revolutionized how we manage our studio. The automation features save us hours every week!", avatar: 'https://placehold.co/100x100/E9D5FF/4C1D95?text=SL' },
-                                { name: 'Mike R.', gym: 'Iron Paradise Gym', quote: "The member app is a game-changer. Our members love the easy booking, and we've seen a huge increase in engagement.", avatar: 'https://placehold.co/100x100/C7D2FE/4338CA?text=MR' },
+                                { name: 'Mike R.', gym: 'Iron Paradise Gym', quote: "The member Oneapp is a game-changer. Our members love the easy booking, and we've seen a huge increase in engagement.", avatar: 'https://placehold.co/100x100/C7D2FE/4338CA?text=MR' },
                                 { name: 'Jessica P.', gym: 'YogaFlow Wellness', quote: "Switching to GymFlow was the best decision for our business. It's intuitive, powerful, and the support is top-notch.", avatar: 'https://placehold.co/100x100/A5F3FC/0E7490?text=JP' },
                             ].map((testimonial, index) => (
                                <AnimatedSection key={index} delay={index * 0.1}>
                                     <div className="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col h-full border border-gray-700">
                                         <div className="flex items-center mb-4">
-                                            <img src={testimonial.avatar} alt={testimonial.name} className="w-16 h-16 rounded-full mr-4 border-2 border-cyan-400" />
+                                            <Image src={testimonial.avatar} alt={testimonial.name} width={100} height={100} className="w-16 h-16 rounded-full mr-4 border-2 border-cyan-400" />
                                             <div>
                                                 <p className="font-bold text-lg text-white">{testimonial.name}</p>
                                                 <p className="text-gray-400">{testimonial.gym}</p>
@@ -432,7 +432,7 @@ const App = () => {
                                         <div className="flex mb-4">
                                             {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
                                         </div>
-                                        <p className="text-gray-300 italic flex-grow">"{testimonial.quote}"</p>
+                                        <p className="text-gray-300 italic flex-grow">&quot;{testimonial.quote}&quot;</p>
                                     </div>
                                 </AnimatedSection>
                             ))}
@@ -476,7 +476,7 @@ const App = () => {
                                     <p className="opacity-90 mt-2">For growing businesses</p>
                                     <p className="text-5xl font-extrabold mt-6">$99<span className="text-lg font-medium opacity-90">/mo</span></p>
                                     <ul className="mt-8 space-y-4">
-                                        {[ 'Up to 500 members', 'All Starter Features', 'Automated Billing', 'Member App', '✨ AI Tools'].map((item, i) => (
+                                        {[ 'Up to 500 members', 'All Starter Features', 'Automated Billing', 'Member OneApp', '✨ AI Tools'].map((item, i) => (
                                             <li key={i} className="flex items-center">
                                                 <CheckCircle className="w-5 h-5 text-white mr-3" />
                                                 <span>{item}</span>
@@ -590,4 +590,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default OneApp;

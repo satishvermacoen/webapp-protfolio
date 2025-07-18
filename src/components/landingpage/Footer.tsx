@@ -4,7 +4,7 @@ const Footer: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
         <div>
           <h3 className="text-xl font-bold mb-4">JANE DOE</h3>
-          <p className="text-slate-400">Creative Web Designer & Developer. <br/>Let's build something amazing together.</p>
+          <p className="text-slate-400">Creative Web Designer & Developer. <br/>Let&apos;s build something amazing together.</p>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-4">Quick Links</h3>
